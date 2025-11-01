@@ -1,0 +1,237 @@
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 305fr 615fr;
+  gap: 18px;
+  width: 100%;
+}
+
+/* Левая колонка - Описание категории */
+.categorySidebar {
+  min-width: 0;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  height: fit-content;
+}
+
+.categoryCard {
+  border-radius: 20px;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 79px;
+  height: 26px;
+  transition: opacity 0.2s;
+}
+
+.backButton:hover {
+  opacity: 0.7;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.categoryTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.categoryCount {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+}
+
+.categoryDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.descriptionText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Правая колонка - Список экспертов */
+.expertsList {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.expertCard {
+  border-radius: 22px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.expertInfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expertHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.expertAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(216, 216, 216, 1);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  flex-shrink: 0;
+}
+
+.expertInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expertName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.expertRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.star {
+  color: #ffd700;
+}
+
+.rating {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.expertDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.sessionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sessionsTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.sessionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 12px;
+}
+
+.sessionRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sessionTitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}
+
+.sessionPriceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topBadge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: #4A90E2;
+  color: #ffffff;
+}
+
+.priceButton {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 11px;
+  background-color: rgba(43, 84, 54, 1);
+  color: #7bed9f;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.priceButton:hover {
+  opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .categorySidebar {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: static;
+  }
+  
+  .expertsList {
+    width: 100%;
+  }
+
+  .expertCard {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+

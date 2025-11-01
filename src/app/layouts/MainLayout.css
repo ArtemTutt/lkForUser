@@ -21,7 +21,8 @@
 
 @media (max-width: 768px) {
   .main-layout {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 70px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
 }

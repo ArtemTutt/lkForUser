@@ -1,6 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './ExpertProfilePage.module.css'
+import { ROUTES_CONFIG } from '@/shared/config/routes.config'
 
 export function ExpertProfilePage() {
+  const navigate = useNavigate()
+
+  // Моковый ID эксперта - в будущем будет из роута или контекста
+  const expertId = '1'
   return (
     <div className={styles.contentWrapper}>
         {/* Левая колонка - Информация об эксперте */}
@@ -56,7 +62,12 @@ export function ExpertProfilePage() {
                 течение ближайших 12 месяцев.
               </p>
               <div className={styles.sessionFooter}>
-                <button className={styles.bookButton}>Забронировать</button>
+                <button 
+                  className={styles.bookButton}
+                  onClick={() => navigate(ROUTES_CONFIG.BOOKING(expertId, '1'))}
+                >
+                  Забронировать
+                </button>
                 <span className={styles.sessionPrice}>1200 ₽</span>
               </div>
             </div>
@@ -69,7 +80,12 @@ export function ExpertProfilePage() {
                 течение ближайших 12 месяцев.
               </p>
               <div className={styles.sessionFooter}>
-                <button className={styles.bookButton}>Забронировать</button>
+                <button 
+                  className={styles.bookButton}
+                  onClick={() => navigate(ROUTES_CONFIG.BOOKING(expertId, '1'))}
+                >
+                  Забронировать
+                </button>
                 <span className={styles.sessionPrice}>1200 ₽</span>
               </div>
             </div>
@@ -82,7 +98,12 @@ export function ExpertProfilePage() {
                 течение ближайших 12 месяцев.
               </p>
               <div className={styles.sessionFooter}>
-                <button className={styles.bookButton}>Забронировать</button>
+                <button 
+                  className={styles.bookButton}
+                  onClick={() => navigate(ROUTES_CONFIG.BOOKING(expertId, '1'))}
+                >
+                  Забронировать
+                </button>
                 <span className={styles.sessionPrice}>1200 ₽</span>
               </div>
             </div>
@@ -95,7 +116,12 @@ export function ExpertProfilePage() {
                 течение ближайших 12 месяцев.
               </p>
               <div className={styles.sessionFooter}>
-                <button className={styles.bookButton}>Забронировать</button>
+                <button 
+                  className={styles.bookButton}
+                  onClick={() => navigate(ROUTES_CONFIG.BOOKING(expertId, '1'))}
+                >
+                  Забронировать
+                </button>
                 <span className={styles.sessionPrice}>1200 ₽</span>
               </div>
             </div>
