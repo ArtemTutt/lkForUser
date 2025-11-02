@@ -1,8 +1,7 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import styles from './BookingPage.module.css'
 
 export function BookingPage() {
-  const navigate = useNavigate()
   const { expertId, sessionId } = useParams()
 
   // Моковые данные - в будущем будут браться из API по ID
