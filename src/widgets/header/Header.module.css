@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 20px;
+  padding: 0 8px;
   transition: height 0.3s ease;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .logoImage {
-  height: 30px;
+  height: 38px;
   width: auto;
   margin-right: 48px;
 }

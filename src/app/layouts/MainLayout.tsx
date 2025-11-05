@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Footer } from '@/widgets/footer';
 import './MainLayout.css';
 
 interface MainLayoutProps {
@@ -6,5 +7,10 @@ interface MainLayoutProps {
 }
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
-  return <div className="main-layout">{children}</div>;
+  return (
+    <div className="main-layout">
+      {children}
+      <Footer />
+    </div>
+  );
 };

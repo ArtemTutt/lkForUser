@@ -1,0 +1,197 @@
+.footer {
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  margin-top: 100px;
+  padding: 30px;
+}
+
+.footerContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 100%;
+}
+
+/* Left Section */
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoImage {
+  width: 100px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.companyName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #b0b0b0;
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.legalLink:hover {
+  opacity: 0.7;
+}
+
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  flex: 0 0 auto;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.socialIcon:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.05);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.appButtons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.appButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.appButton:hover {
+  background-color: #3a3a3a;
+}
+
+.appButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .leftSection {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logoContainer {
+    justify-content: center;
+  }
+
+  .companyName {
+    font-size: 20px;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+
+  .legalLinks {
+    flex-direction: row;
+    gap: 4px;
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .legalLinks .legalLink:first-child::after {
+    content: '.';
+    margin-left: 4px;
+  }
+
+  .rightSection {
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .appButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .appButton {
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+}
+

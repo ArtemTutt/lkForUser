@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ROUTES_CONFIG } from '@/shared/config/routes.config'
 import styles from './ExpertsPage.module.css'
 
 export function ExpertsPage() {
@@ -86,7 +87,7 @@ export function ExpertsPage() {
           {experts.map((expert) => (
             <div key={expert.id} className={styles.expertItem}>
               <Link 
-                to={`/experts/${expert.id}`} 
+                to={ROUTES_CONFIG.EXPERTS_CATEGORY_BY_ID(expert.id.toString())} 
                 className={styles.expertCard}
                 style={{ backgroundColor: expert.color }}
               >
@@ -101,6 +102,29 @@ export function ExpertsPage() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className={styles.infoBlock}>
+          <p className={styles.infoText}>
+            <span className={styles.infoTextLight}>В Alma вы выбираете </span>
+            <span className={styles.infoTextHighlight}>проверенных экспертов</span>
+            <span className={styles.infoTextLight}> с подтверждённым опытом, ⭐ рейтингом и отзывами.</span>
+          </p>
+          <p className={styles.infoText}>
+            <span className={styles.infoTextLight}>Общение проходит </span>
+            <span className={styles.infoTextHighlight}>прямо в приложении</span>
+            <span className={styles.infoTextLight}> 💬, а оплата через систему Alma обеспечивает </span>
+            <span className={styles.infoTextHighlight}>безопасность и удобство</span>
+            <span className={styles.infoTextLight}> каждой сессии.</span>
+          </p>
+        </div>
+
+        <div className={styles.testimonialBlock}>
+          <div className={styles.testimonialBubble}>
+            <p className={styles.testimonialText}>«Нашла через Alma эксперта, который помог разобраться с важным выбором»</p>
+            <p className={styles.testimonialSource}>Отзыв из ВК</p>
+          </div>
+          <p className={styles.testimonialAuthor}>Елена С.</p>
         </div>
       </div>
   )

@@ -1,0 +1,2 @@
+export { BecomeExpertPage } from './BecomeExpertPage';
+

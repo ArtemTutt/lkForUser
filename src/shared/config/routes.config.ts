@@ -1,19 +1,21 @@
 export class RoutesConfig {
   static HOME = '/';
-  static SESSIONS = '/sessions';
-  static EXPERTS = '/experts';
-  static EXPERTS_CATEGORY = '/experts/category';
+  static SESSIONS = '/expert/sessions';
+  static EXPERTS = '/expert/experts';
+  static EXPERTS_CATEGORY = '/expert/experts/category';
+  static BECOME_EXPERT = '/become-expert';
+  static BECOME_EXPERT_FORM = '/become-expert/form';
 
   static EXPERT_PROFILE(id: string) {
-    return `/expert/${id}`;
+    return `/expert/expert/${id}`;
   }
 
   static EXPERTS_CATEGORY_BY_ID(id: string) {
-    return `/experts/${id}`;
+    return `/expert/experts/${id}`;
   }
 
   static BOOKING(expertId: string, sessionId: string) {
-    return `/booking/${expertId}/${sessionId}`;
+    return `/expert/booking/${expertId}/${sessionId}`;
   }
 }
 

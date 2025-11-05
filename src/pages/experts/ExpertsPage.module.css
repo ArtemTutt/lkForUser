@@ -90,6 +90,79 @@
   font-size: 10px;
 }
 
+.infoBlock {
+  margin-top: 60px;
+  max-width: 800px;
+}
+
+.infoText {
+  font-size: 36px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  width: 740px;
+}
+
+.infoText:last-child {
+  margin-bottom: 0;
+}
+
+.infoTextLight {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.infoTextHighlight {
+  color: #ffffff;
+}
+
+.testimonialBlock {
+  margin-top: 80px;
+  height: 150px;
+}
+
+.testimonialBubble {
+  background: linear-gradient(135deg, #6B46C1 0%, #7C3AED 100%);
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);
+  margin-bottom: 16px;
+}
+
+.testimonialBubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid #6B46C1;
+  transform: rotate(-15deg);
+}
+
+.testimonialText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.testimonialSource {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.testimonialAuthor {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  padding-left: 40px;
+}
+
 /* Адаптивность */
 @media (max-width: 1200px) {
   .expertsGrid {
@@ -128,6 +201,31 @@
   
   .expertDescription {
     font-size: 11px;
+  }
+  
+  .infoBlock {
+    margin-top: 40px;
+  }
+  
+  .infoText {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .testimonialBlock {
+    margin-top: 50px;
+  }
+  
+  .testimonialBubble {
+    padding: 24px;
+  }
+  
+  .testimonialText {
+    font-size: 16px;
+  }
+  
+  .testimonialAuthor {
+    padding-left: 24px;
   }
 }
 

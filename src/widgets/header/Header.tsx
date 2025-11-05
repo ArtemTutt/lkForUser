@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
+import { ROUTES_CONFIG } from '@/shared/config/routes.config'
 import styles from './Header.module.css'
 
 function Header() {
@@ -33,14 +34,14 @@ function Header() {
           <img src="/logo.svg" alt="Alma" className={styles.logoImage} />
 
           <nav className={styles.nav}>
-            <a href="#about" className={styles.navLink}>Об Alma</a>
-            <Link to="/experts" className={styles.navLink}>Эксперты</Link>
-            <a href="#become-expert" className={styles.navLink}>Стать экспертом</a>
+            <Link to="/" className={styles.navLink}>Об Alma</Link>
+            <Link to={ROUTES_CONFIG.EXPERTS} className={styles.navLink}>Эксперты</Link>
+            <Link to={ROUTES_CONFIG.BECOME_EXPERT} className={styles.navLink}>Стать экспертом</Link>
           </nav>
         </div>
          
         <div className={styles.headerRight}>
-          <Link to="/sessions" className={styles.navLink}>Мои сессии</Link>
+          <Link to={ROUTES_CONFIG.SESSIONS} className={styles.navLink}>Мои сессии</Link>
           <div 
             ref={userMenuRef}
             className={styles.userMenu}
@@ -62,7 +63,7 @@ function Header() {
 
       {isDropdownOpen && (
         <div className={styles.dropdownMenu}>
-          <Link to="/sessions" className={styles.dropdownItem} onClick={() => setIsDropdownOpen(false)}>Мои сессии (0)</Link>
+          <Link to={ROUTES_CONFIG.SESSIONS} className={styles.dropdownItem} onClick={() => setIsDropdownOpen(false)}>Мои сессии (0)</Link>
           <button className={styles.dropdownItem}>Подписка Alma Plus</button>
           <button className={styles.dropdownItem}>Поддержка</button>
           <button className={`${styles.dropdownItem} ${styles.logoutItem}`}>Выйти</button>
@@ -71,7 +72,7 @@ function Header() {
 
       {isMobileMenuOpen && (
         <div ref={mobileMenuRef} className={styles.mobileMenu}>
-          <Link to="/sessions" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Мои сессии (0)</Link>
+          <Link to={ROUTES_CONFIG.SESSIONS} className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Мои сессии (0)</Link>
           <button className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Подписка Alma Plus</button>
           <button className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Поддержка</button>
           <button className={`${styles.mobileMenuItem} ${styles.logoutItem}`} onClick={() => setIsMobileMenuOpen(false)}>Выйти</button>
